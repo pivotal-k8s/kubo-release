@@ -3,6 +3,7 @@ name: kube-scheduler
 
 templates:
   bin/kube_scheduler_ctl.erb: bin/kube_scheduler_ctl
+  bin/pre-start: bin/pre-start
   config/kubeconfig.erb: config/kubeconfig
   config/ca.pem.erb: config/ca.pem
 

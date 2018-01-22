@@ -2,6 +2,7 @@
 name: kube-controller-manager
 
 templates:
+  bin/pre-start: bin/pre-start
   bin/kube_controller_manager_ctl.erb: bin/kube_controller_manager_ctl
   config/ca.pem.erb: config/ca.pem
   config/kubeconfig.erb: config/kubeconfig

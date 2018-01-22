@@ -39,7 +39,13 @@ update_vsphere_vms() {
    /var/vcap/packages/govc/bin/govc vm.change -e 'disk.enableUUID=1' -vm.uuid=$vm_uuid
 }
 
+secure_configs() {
+    chown root:vcap "${CONF_DIR}"
+    chmod 0750 "${CONF_DIR}"
+}
+
 main() {
+  secure_configs
   detect_cloud_config
   shutdown_rpcbind_if_its_running
   if [[ "vsphere" == "$cloud_provider" ]]; then

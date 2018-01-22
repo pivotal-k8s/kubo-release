@@ -3,6 +3,7 @@ name: apply-specs
 templates:
   bin/deploy-specs.erb: bin/deploy-specs
   bin/run: bin/run
+  bin/pre-start: bin/pre-start
   specs/addon-spec.yml.erb: specs/addon-spec.yml
   config/kubeconfig.erb: config/kubeconfig
   config/ca.pem.erb: config/ca.pem

@@ -1,6 +1,0 @@
-#!/bin/bash
-
-set -euxo pipefail
-
-chown root:vcap /var/vcap
-chmod 0750 /var/vcap
