@@ -17,8 +17,8 @@ cni-windows/host-local.exe:
   size: 3140608
   sha: 83d4f221fc96e44c7c032f785cec95ec7ad0f605
 cni-windows/win-bridge.exe:
-  size: 5809664
-  sha: c585394fcf00bf99dc3bd3150eb5a67d2b00c5af
+  size: 5642240
+  sha: 92e27122d4c2b52226662d95448bd8d110d17223
 cni-windows/win-overlay.exe:
   size: 5682688
   sha: 6e8fd504fbc6706e7bd8253ed8a548761a922c31
@@ -126,17 +126,6 @@ kubernetes-1.12.4/kubelet:
   size: 176685072
   object_id: 8c39822c-4b09-4088-68c1-1e07b2003913
   sha: 268ba0ded6190f8263c12b3e9a82721cc2a4506c
-libmnl0_1.0.3-3.deb:
-  size: 11416
-  object_id: 245e085f-1ad2-447d-67bb-1894b960c571
-  sha: dcb0b572f1207ad192d8cb1a9010fc6dd22d0000
-libtool-2.4.6.tar.gz:
-  size: 1806697
-  object_id: 670cc8a2-75d8-4fb5-465f-270395cb9373
-  sha: 25b6931265230a06f0fc2146df64c04e5ae6ec33
-kubernetes-windows-1.11.3/kube-proxy.exe:
-  size: 46113792
-  sha: cce58ba13e2c2e308703f333096daa97136d0bc1
 kubernetes-windows-1.11.3/kubeadm.exe:
   size: 57290752
   object_id: 4efc30c5-7694-4165-6ef2-aa3eb39d8bbf
@@ -149,6 +138,18 @@ kubernetes-windows-1.11.3/kubelet.exe:
   size: 155562496
   object_id: a937aacb-d62d-47d6-44b8-9502596efa68
   sha: c9a1b1333a30212cf0644ba0f01fe66c448a531f
+kubernetes-windows-1.12.3/kube-proxy.exe:
+  size: 45156864
+  sha: 08d7654bf4d346d070a13312686ed71ec9fb062e
+kubernetes-windows-1.12.3/kubeadm.exe:
+  size: 53927936
+  sha: 993f3569c18705395e33883731bf26676143fd38
+kubernetes-windows-1.12.3/kubectl.exe:
+  size: 57621504
+  sha: ee6e2821ab207802ff2bc03bfc0334bd79a1b6ff
+kubernetes-windows-1.12.3/kubelet.exe:
+  size: 160776192
+  sha: e8c057be575849237483339162af58cf08a0e30a
 libmnl0_1.0.3-3.deb:
   size: 11416
   object_id: 245e085f-1ad2-447d-67bb-1894b960c571

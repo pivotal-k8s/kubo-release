@@ -11,8 +11,20 @@ function ensure_kubelet_is_running {
 function start_kube_proxy {
   $network = Get-HnsNetwork | ? Type -Eq L2Bridge
   $env:KUBE_NETWORK = $network.Name
+  $nodename = hostname
 
-  C:\var\vcap\packages\kubernetes-windows\bin\kube-proxy.exe -v 5 --config /var/vcap/jobs/kube-proxy-windows/config/config.yml
+<%
+  if_p('cloud-provider') do |cloud_provider|
+    if cloud_provider == "vsphere"
+%>
+  C:\var\vcap\packages\kubernetes-windows\bin\kube-proxy.exe -v 5 `
+    --nodename-override $nodename `
+    --config /var/vcap/jobs/kube-proxy-windows/config/config.yml
+<%else%>
+  C:\var\vcap\packages\kubernetes-windows\bin\kube-proxy.exe -v 5 `
+    --config /var/vcap/jobs/kube-proxy-windows/config/config.yml
+<%end%>
+<%end%>
 }
 
 function check_for_networking {
