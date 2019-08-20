@@ -27,6 +27,7 @@ function start_flanneld {
   $confFile= '
 {
   "name": "<%= get_network_name %>",
+  "cniVersion": "0.3.1",
   "plugins": [
     {
       "type": "flannel",
